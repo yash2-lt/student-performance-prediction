@@ -1,0 +1,236 @@
+{
+  "raw_rows": 1025,
+  "raw_cols": 16,
+  "missing_before": {
+    "parental_education": 20,
+    "attendance": 30,
+    "study_hours": 41,
+    "internal_marks": 20,
+    "participation": 30
+  },
+  "duplicates_before": 25,
+  "clean_rows": 1000,
+  "missing_after": 0,
+  "level_counts": {
+    "Low": 262,
+    "Average": 497,
+    "High": 241
+  },
+  "score_summary": {
+    "count": 1000.0,
+    "mean": 57.93,
+    "std": 12.77,
+    "min": 21.7,
+    "25%": 49.3,
+    "50%": 58.3,
+    "75%": 66.5,
+    "max": 95.3
+  },
+  "corr_with_score": {
+    "internal_marks": 0.873,
+    "previous_score": 0.805,
+    "study_hours": 0.725,
+    "attendance": 0.656,
+    "participation": 0.602
+  },
+  "group_means": {
+    "Low": {
+      "attendance": 67.94,
+      "study_hours": 1.72,
+      "internal_marks": 43.16,
+      "participation": 4.58,
+      "previous_score": 52.97
+    },
+    "Average": {
+      "attendance": 78.74,
+      "study_hours": 3.24,
+      "internal_marks": 57.91,
+      "participation": 5.97,
+      "previous_score": 65.85
+    },
+    "High": {
+      "attendance": 87.47,
+      "study_hours": 4.73,
+      "internal_marks": 71.22,
+      "participation": 7.31,
+      "previous_score": 79.03
+    }
+  },
+  "subject_avg_overall": {
+    "math_score": 54.71,
+    "science_score": 57.79,
+    "english_score": 60.06,
+    "computer_score": 61.19
+  },
+  "cat_effects": {
+    "tutoring": {
+      "No": 57.2,
+      "Yes": 59.55
+    },
+    "internet_access": {
+      "No": 57.12,
+      "Yes": 58.04
+    },
+    "extracurricular": {
+      "No": 57.19,
+      "Yes": 58.56
+    },
+    "parental_education": {
+      "Bachelors": 57.94,
+      "High School": 57.51,
+      "Masters": 58.08,
+      "PhD": 59.45
+    },
+    "gender": {
+      "Female": 58.14,
+      "Male": 57.72
+    }
+  },
+  "train_size": 800,
+  "test_size": 200,
+  "regression": {
+    "Linear Regression": {
+      "MAE": 3.559,
+      "RMSE": 4.668,
+      "R2": 0.8587,
+      "CV_R2_mean": 0.888,
+      "CV_R2_std": 0.0053
+    },
+    "Decision Tree": {
+      "MAE": 4.37,
+      "RMSE": 5.667,
+      "R2": 0.7917,
+      "CV_R2_mean": 0.7891,
+      "CV_R2_std": 0.0262
+    },
+    "Random Forest": {
+      "MAE": 4.023,
+      "RMSE": 5.151,
+      "R2": 0.8279,
+      "CV_R2_mean": 0.8586,
+      "CV_R2_std": 0.0156
+    }
+  },
+  "best_regressor": "Linear Regression",
+  "classification": {
+    "Decision Tree": {
+      "Accuracy": 0.775,
+      "F1_macro": 0.7708,
+      "CV_Accuracy_mean": 0.771,
+      "CV_Accuracy_std": 0.035
+    },
+    "Random Forest": {
+      "Accuracy": 0.815,
+      "F1_macro": 0.812,
+      "CV_Accuracy_mean": 0.821,
+      "CV_Accuracy_std": 0.0387
+    }
+  },
+  "best_classifier": "Random Forest",
+  "classification_report": {
+    "Low": {
+      "precision": 0.8478260869565217,
+      "recall": 0.75,
+      "f1-score": 0.7959183673469388,
+      "support": 52.0
+    },
+    "Average": {
+      "precision": 0.7889908256880734,
+      "recall": 0.86,
+      "f1-score": 0.8229665071770335,
+      "support": 100.0
+    },
+    "High": {
+      "precision": 0.8444444444444444,
+      "recall": 0.7916666666666666,
+      "f1-score": 0.8172043010752689,
+      "support": 48.0
+    },
+    "accuracy": 0.815,
+    "macro avg": {
+      "precision": 0.8270871190296799,
+      "recall": 0.8005555555555555,
+      "f1-score": 0.8120297251997471,
+      "support": 200.0
+    },
+    "weighted avg": {
+      "precision": 0.8175968621193991,
+      "recall": 0.815,
+      "f1-score": 0.8145510613567853,
+      "support": 200.0
+    }
+  },
+  "confusion_matrix": [
+    [
+      39,
+      13,
+      0
+    ],
+    [
+      7,
+      86,
+      7
+    ],
+    [
+      0,
+      10,
+      38
+    ]
+  ],
+  "feature_importance": {
+    "internal_marks": 0.3242,
+    "previous_score": 0.2132,
+    "study_hours": 0.193,
+    "attendance": 0.1165,
+    "participation": 0.0857,
+    "gender_Male": 0.0075,
+    "parental_education_High School": 0.0074,
+    "tutoring_Yes": 0.0066,
+    "parental_education_Bachelors": 0.0065,
+    "gender_Female": 0.0065
+  },
+  "sample_recommendations": [
+    {
+      "student_id": "STU0434",
+      "predicted_score": 34.7,
+      "predicted_level": "Low",
+      "actual_score": 33.3,
+      "attendance": 58.0,
+      "study_hours": 0.2,
+      "recommendations": [
+        "Improve attendance: currently 58%, high performers typically attend about 87%. Aim for at least 75% first.",
+        "Increase study hours: add about 4.4 hours per day (currently 0.2, high performers study about 4.6).",
+        "Participate more in class discussions, labs and group activities.",
+        "Internal marks are below the high-performer benchmark: revise regularly and attend practice sessions before internal assessments.",
+        "Focus on weak subjects: Computer."
+      ]
+    },
+    {
+      "student_id": "STU0188",
+      "predicted_score": 63.1,
+      "predicted_level": "Average",
+      "actual_score": 69.0,
+      "attendance": 78.8,
+      "study_hours": 5.2,
+      "recommendations": [
+        "Attendance is acceptable (79%) but pushing towards 87% matches the high-performing group.",
+        "Participate more in class discussions, labs and group activities.",
+        "Internal marks are below the high-performer benchmark: revise regularly and attend practice sessions before internal assessments.",
+        "Focus on weak subjects: English.",
+        "Consider joining tutoring or peer-study sessions."
+      ]
+    },
+    {
+      "student_id": "STU0088",
+      "predicted_score": 66.8,
+      "predicted_level": "High",
+      "actual_score": 64.2,
+      "attendance": 92.6,
+      "study_hours": 5.7,
+      "recommendations": [
+        "Participate more in class discussions, labs and group activities.",
+        "Focus on weak subjects: Math."
+      ]
+    }
+  ]
+}
